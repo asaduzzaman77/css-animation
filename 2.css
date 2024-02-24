@@ -1,0 +1,79 @@
+
+
+.parents {
+  width: 600px;
+  height: 300px;
+  border: 5px solid gray;
+  position: relative;
+  box-sizing: border-box;
+  box-shadow: 3px 3px 2px black;
+  margin:200px auto;
+  animation: parent-anim 4s infinite linear alternate;
+
+}
+.child {
+  width: 100px;
+  height: 100px;
+  background-color: orangered;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: child-anim 4s infinite linear alternate;
+}
+ @keyframes parent-anim{
+  0%{
+    border: 5px solid gray;
+    box-shadow: 3px 3px 2px black;
+  }
+  25%{
+    border: 5px solid rgb(243, 177, 177);
+    box-shadow: 3px 3px 2px rgb(238, 230, 230);
+  }
+  50%{
+    border: 5px solid rgb(226, 22, 22);
+    box-shadow: 3px 3px 2px rgb(17, 2, 4);
+  }
+  75%{
+    border: 5px solid rgb(69, 107, 231);
+    box-shadow: 3px 3px 2px rgb(210, 226, 88);
+  }
+  100%{
+    border: 5px solid gray;
+    box-shadow: 3px 3px 2px black;
+  }
+ }
+
+ @keyframes child-anim{
+  0%{
+    top: 0;
+    left: 0;
+    background-color: orangered;
+  }
+  25%{
+    top: 150px;
+    left: 0;
+    background-color: rgb(128, 59, 240);
+    width: 150px;
+    height: 150px;
+  }
+  50%{
+    top: 0;
+   
+    background-color: rgb(128, 59, 240);
+    width: 100px;
+    height: 100px;
+  }
+  75%{
+    top: 245px;
+    left: 545px;
+    background-color: aqua;
+    width: 50px;
+    height: 50px;
+  }
+  100%{
+    top: 0;
+    left: 0;
+    background-color: rgb(230, 69, 11);
+  }
+ }
